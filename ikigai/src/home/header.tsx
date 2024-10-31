@@ -4,16 +4,17 @@ import { Button } from "@/components/ui/button";
 function Header() {
     return (
         <div>
-            <header>
+            <header className="bg-white shadow-sm">
                 <nav>
                     <div className="logo">
                         <img src="images/ikigai lgz.jpg" alt="" />
                     </div>
-
-                    <Button variant="ghost">HOME</Button>
-                    <Button variant="ghost">ABOUT-US</Button>
-                    <Button variant="ghost">PRODUCTS</Button>
-                    <Button variant="ghost">CONTACT-US</Button>
+                    <div className="space-x-4">
+                        <Button variant="ghost">HOME</Button>
+                        <Button variant="ghost">ABOUT-US</Button>
+                        <Button variant="ghost">PRODUCTS</Button>
+                        <Button variant="ghost">CONTACT-US</Button>
+                    </div>
                 </nav>
             </header>
         </div>

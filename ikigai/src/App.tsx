@@ -2,6 +2,7 @@
 import Header from './home/header'
 
 import './App.css'
+import Homemain from './home/homemain'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
       <Header />
+      <Homemain />
     </>
   )
 }

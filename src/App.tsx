@@ -1,16 +1,15 @@
+import About from "./aboutpage/about"
+import Home from "./homepage/home"
 
-import Header from './home/header'
 
-import './App.css'
-import Homemain from './home/homemain'
 
 function App() {
 
 
   return (
     <>
-      <Header />
-      <Homemain />
+      <Home />
+      <About />
     </>
   )
 }

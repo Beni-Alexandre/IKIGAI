@@ -4,8 +4,8 @@ import Header from "@/home/header";
 function About() {
     return (
         <div>
-            {/* <Header /> */}
-            <p>ikigai</p>
+            <Header />
+
         </div>
     )
 }

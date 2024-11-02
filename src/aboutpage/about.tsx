@@ -1,10 +1,11 @@
-import Header from "@/homepage/header";
+import Header from "@/home/header";
 
 
 function About() {
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
+            <p>ikigai</p>
         </div>
     )
 }

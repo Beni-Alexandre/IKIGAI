@@ -1,5 +1,5 @@
-import About from "./aboutpage/about"
-import Home from "./homepage/home"
+
+import Home from "./home/home"
 
 
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Home />
-      <About />
+
     </>
   )
 }

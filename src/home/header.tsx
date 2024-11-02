@@ -1,5 +1,10 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
+
+
+
 
 
 function Header() {
@@ -11,8 +16,10 @@ function Header() {
                         <img src="images/ikigai lgz.jpg" alt="" />
                     </div>
                     <div className="space-x-4">
-                        <Button variant="ghost">HOME</Button>
-                        <Button variant="ghost">ABOUT-US</Button>
+
+                        <Link to='/'>         <Button variant="ghost">HOME</Button></Link>
+
+                        <Link to="/about"> <Button variant="ghost">ABOUT-US</Button></Link>
                         <Button variant="ghost">PRODUCTS</Button>
                         <Button variant="ghost">CONTACT-US</Button>
                     </div>

@@ -17,7 +17,7 @@ function Header() {
                     </div>
                     <div className="space-x-4">
 
-                        <Link to='/'>         <Button variant="ghost">HOME</Button></Link>
+                        <Link to='/'> <Button variant="ghost">HOME</Button></Link>
 
                         <Link to="/about"> <Button variant="ghost">ABOUT-US</Button></Link>
                         <Button variant="ghost">PRODUCTS</Button>

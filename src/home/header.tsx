@@ -13,15 +13,15 @@ function Header() {
             <header className="bg-white shadow-sm">
                 <nav>
                     <div className="logo">
-                        <img src="images/ikigai lgz.jpg" alt="" />
+                        <img src="images/ikigai lg.jpg" alt="" />
                     </div>
                     <div className="space-x-4">
 
                         <Link to='/'> <Button variant="ghost">HOME</Button></Link>
 
                         <Link to="/about"> <Button variant="ghost">ABOUT-US</Button></Link>
-                        <Button variant="ghost">PRODUCTS</Button>
-                        <Button variant="ghost">CONTACT-US</Button>
+                        <Link to="/product">         <Button variant="ghost">PRODUCTS</Button></Link>
+                        <Link to="/contact">  <Button variant="ghost">CONTACT-US</Button></Link>
                     </div>
                 </nav>
             </header>

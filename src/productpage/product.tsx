@@ -1,10 +1,11 @@
 import Header from "@/home/header";
 
-function Product() {
+
+function Products() {
     return (
         <div>
             <Header />
         </div>
     )
 }
-export default Product;
+export default Products;

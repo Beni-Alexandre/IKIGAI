@@ -1,7 +1,7 @@
 import Header from "@/home/header";
-import { Button } from "@/components/ui/button"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { TrendingUp, ShoppingBag, Gift, Sun, Users, Target, Zap } from "lucide-react"
+import { TrendingUp, Target, Zap } from "lucide-react"
 function About() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
@@ -79,9 +79,9 @@ function About() {
                     <h2 className="text-2xl font-bold mb-6">Our Team</h2>
                     <div className="grid gap-6 md:grid-cols-3">
                         {[
-                            { name: "Jane Doe", role: "CEO & Founder", image: "/placeholder.svg?height=100&width=100" },
-                            { name: "John Smith", role: "Head of Product Curation", image: "/placeholder.svg?height=100&width=100" },
-                            { name: "Emily Chen", role: "Chief Trend Officer", image: "/placeholder.svg?height=100&width=100" },
+                            { name: "HONFOGA Nelson", role: "CEO & Founder", image: "/placeholder.svg?height=100&width=100" },
+                            { name: "Ange marie", role: "Head of Product Curation", image: "/placeholder.svg?height=100&width=100" },
+                            { name: "Olade", role: "Chief Trend Officer", image: "/placeholder.svg?height=100&width=100" },
                         ].map((member) => (
                             <Card key={member.name}>
                                 <CardHeader>

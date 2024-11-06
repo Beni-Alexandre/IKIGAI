@@ -12,9 +12,10 @@ function Header() {
         <div>
             <header className="bg-white shadow-sm">
                 <nav>
-                    <div className="logo">
+                    <div className="text-2xl font-bold text-blue-600">Ikigai</div>
+                    {/* <div className="logo">
                         <img src="images/ikigai lg.jpg" alt="" />
-                    </div>
+                    </div> */}
                     <div className="space-x-4">
 
                         <Link to='/'> <Button variant="ghost">HOME</Button></Link>

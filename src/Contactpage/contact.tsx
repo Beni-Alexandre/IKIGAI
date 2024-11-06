@@ -16,15 +16,6 @@ import { MapPin, Phone, Mail } from "lucide-react"
 
 
 function Contact() {
-    // const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'submitted' | 'error'>('idle')
-
-    // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    //     event.preventDefault()
-    //     setFormStatus('submitting')
-    //     // Simulate form submission
-    //     await new Promise(resolve => setTimeout(resolve, 2000))
-    //     setFormStatus('submitted')
-
     const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'submitted' | 'error'>('idle')
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()

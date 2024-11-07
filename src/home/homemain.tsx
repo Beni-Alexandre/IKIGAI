@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card"
 import { TrendingUp, ShoppingBag, Gift, Sun } from 'lucide-react';
 
-
+import { Link } from "react-router-dom";
 
 function Homemain() {
     return (
@@ -23,9 +23,9 @@ function Homemain() {
                 <p className="mb-10 text-xl">
                     Ikigai brings you the most relevant and in-demand items, perfectly aligned with current trends and seasons.
                 </p>
-                <Button className="explore_button" size="lg" variant="secondary">
+                <Link to="/product">       <Button className="explore_button" size="lg" variant="secondary">
                     Explore Our Collection
-                </Button>
+                </Button></Link>
             </section >
             <section className="reason">
                 <div className="container mx-auto px-4">
@@ -93,7 +93,7 @@ function Homemain() {
                     <p>&copy; 2024 Ikigai. All rights reserved.</p>
                 </div>
             </footer>
-        </div>
+        </div >
 
 
     )

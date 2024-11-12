@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "@/home/header";
 import {
     Card,
@@ -7,22 +8,12 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
-import { useState } from "react";
 
 
-// const initialProducts = [
-//     { id: 1, name: "Smart Home Assistant", price: 129.99, category: "Electronics", badge: "Hot" },
-//     { id: 2, name: "Wireless Earbuds", price: 89.99, category: "Electronics", badge: "Best Seller" },
-//     { id: 3, name: "Fitness Tracker", price: 59.99, category: "Wearables", badge: "New" },
-//     { id: 4, name: "Eco-friendly Water Bottle", price: 24.99, category: "Lifestyle", badge: null },
-//     { id: 5, name: "Ergonomic Office Chair", price: 199.99, category: "Furniture", badge: "Trending" },
-//     { id: 6, name: "Portable Charger", price: 39.99, category: "Electronics", badge: null },
-//     { id: 7, name: "Yoga Mat", price: 29.99, category: "Fitness", badge: null },
-//     { id: 8, name: "Noise-Cancelling Headphones", price: 149.99, category: "Electronics", badge: "Top Rated" },
-//     { id: 9, name: "Stainless Steel Lunchbox", price: 34.99, category: "Lifestyle", badge: "Eco-friendly" },
-// ]
+
 
 const products = [
     { id: 1, name: "Palm Oil", price: 1000, category: "Food", badge: "Hot" },
@@ -38,7 +29,7 @@ const products = [
 ]
 function Products() {
 
-    const [product, setProduct] = useState("")
+
     return (
         <div>
             <Header />
@@ -54,7 +45,7 @@ function Products() {
                             </CardHeader>
                             <CardContent>
                                 <p>Category: {products.category}</p>
-                                {products.badge}
+                                <Badge>  {products.badge}</Badge>
                             </CardContent>
                             <CardFooter>
                                 <Button className="w-full">Add to cart</Button>

@@ -106,3 +106,7 @@ section {
 .explore_button {
   margin-bottom: 8%;
 }
+
+/*responsive style*/
+
+@media (max-width: 768px) {}

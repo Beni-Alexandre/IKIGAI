@@ -1,8 +1,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Menu } from 'lucide-react';
-import { useState } from "react";
+// import { Menu } from 'lucide-react';
+// import { useState } from "react";
 
 
 
@@ -19,7 +19,7 @@ function Header() {
                     </div> */}
 
                     <div className="space-x-4">
-                        <Button >   <Menu /></Button>
+                        {/* <Button >   <Menu /></Button> */}
                         <ul className="menu">
                             <Link to='/'> <Button variant="ghost">HOME</Button></Link>
 

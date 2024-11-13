@@ -17,18 +17,18 @@ import { Badge } from "@/components/ui/badge";
 
 const products = [
     { id: 1, name: "Palm Oil", price: 1000, category: "Food", badge: "Hot" },
-    { id: 2, name: "Cannelle", price: 10000, category: "Food", badge: "Best Seller" },
-    { id: 3, name: "Curcuma", price: 8000, category: "Food", badge: "New" },
-    { id: 4, name: "Ail", price: 13000, category: "Food", badge: "Top Rated" },
-    { id: 5, name: "Gigembre", price: 7000, category: "Food", badge: "Trending" },
-    { id: 6, name: "Clou de girofle", price: 15000, category: "Food", badge: "Eco-friendly" },
-    { id: 7, name: "Badiane", price: 8000, category: "Food", badge: "Hot" },
-    { id: 8, name: "Thym", price: 5000, category: "Food", badge: "Top Rated" },
-    { id: 9, name: "Romarin", price: 9000, category: "Food", badge: "Top Rated" },
-    { id: 10, name: "Poivre noir ", price: 10000, category: "Food", badge: "Top Rated" },
-    { id: 11, name: "Poivre long", price: 6000, category: "Food", badge: "Top Rated" },
-    { id: 12, name: "Piment rouge", price: 3500, category: "Food", badge: "Top Rated" },
-    { id: 13, name: "Laurier", price: 5000, category: "Food", badge: "Top Rated" },
+    { id: 2, name: "Cannelle", price: 10000, category: "Grocery", badge: "Best Seller" },
+    { id: 3, name: "Curcuma", price: 8000, category: "Grocery", badge: "New" },
+    { id: 4, name: "Ail", price: 13000, category: "Grocery", badge: "Top Rated" },
+    { id: 5, name: "Gigembre", price: 7000, category: "Grocery", badge: "Trending" },
+    { id: 6, name: "Clou de girofle", price: 15000, category: "Grocery", badge: "Eco-friendly" },
+    { id: 7, name: "Badiane", price: 8000, category: "Grocery", badge: "Hot" },
+    { id: 8, name: "Thym", price: 5000, category: "Grocery", badge: "Top Rated" },
+    { id: 9, name: "Romarin", price: 9000, category: "Grocery", badge: "Top Rated" },
+    { id: 10, name: "Poivre noir ", price: 10000, category: "Grocery", badge: "Top Rated" },
+    { id: 11, name: "Poivre long", price: 6000, category: "Grocery", badge: "Top Rated" },
+    { id: 12, name: "Piment rouge", price: 3500, category: "Grocery", badge: "Top Rated" },
+    { id: 13, name: "Laurier", price: 5000, category: "Grocery", badge: "Top Rated" },
 
 
 ]

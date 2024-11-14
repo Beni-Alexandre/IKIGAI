@@ -116,7 +116,7 @@ section {
 
   } */
 
-  .menu {
+  /* .menu {
     display: block;
     position: absolute;
     background: white;
@@ -127,5 +127,5 @@ section {
     transition: 1s;
 
 
-  }
+  } */
 }

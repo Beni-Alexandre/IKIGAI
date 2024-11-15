@@ -107,25 +107,47 @@ section {
   margin-bottom: 8%;
 }
 
+.menu-icon {
+  display: none;
+}
+
 /*responsive style*/
 
 @media (max-width: 768px) {
 
-  /* .menu {
-    display: none;
+  .menu :not(:last-child) {
+    margin-right: 50px;
+  }
+}
 
-  } */
-
-  /* .menu {
+@media (max-width: 600px) {
+  .menu-icon {
     display: block;
+    cursor: pointer;
+  }
+
+  .menu {
     position: absolute;
-    background: white;
-    height: 20vh;
-    top: 0;
-    text-align: left;
-    z-index: 2;
-    transition: 1s;
+    right: 0;
+    top: 60px;
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.7s ease-in;
+    overflow: hidden;
+    background-color: white;
+  }
 
+  .menu.active {
+    width: 270px;
+  }
 
-  } */
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
 }

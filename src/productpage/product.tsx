@@ -15,7 +15,7 @@ import { Badge } from "@/components/ui/badge";
 
 
 
-const products = [
+const initialProducts = [
     { id: 1, name: "Palm Oil", price: 1000, category: "Food", badge: "Hot" },
     { id: 2, name: "Cannelle", price: 10000, category: "Grocery", badge: "Best Seller" },
     { id: 3, name: "Curcuma", price: 8000, category: "Grocery", badge: "New" },
@@ -33,7 +33,7 @@ const products = [
 
 ]
 function Products() {
-
+    const [products, setProducts] = useState(initialProducts)
 
     return (
         <div>

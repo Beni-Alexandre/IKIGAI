@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-
+import { Input } from "@/components/ui/input";
 
 
 
@@ -34,12 +34,22 @@ const initialProducts = [
 ]
 function Products() {
     const [products, setProducts] = useState(initialProducts)
+    const [searchTerm, setSearchTerm] = useState("")
 
     return (
         <div>
             <Header />
             <main className="container mx-auto px-4 py-12" >
-                <h1 className="mb-8 text-4xl font-bold text-center">Products</h1>
+                <h1 className="mb-8 text-4xl font-bold text-center">Our Products</h1>
+                <div className="w-full md:w-1/3 relative">
+                    <Input
+                        type="text"
+                        placeholder="Search products..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="pl-10"
+                    />
+                </div>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {products.map((products) =>
 

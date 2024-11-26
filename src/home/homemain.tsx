@@ -88,11 +88,11 @@ function Homemain() {
                 </Button>
             </section>
 
-            <footer className="bg-gray-800 py-10 text-gray-300">
+            {/* <footer className="bg-gray-800 py-10 text-gray-300">
                 <div className="container mx-auto px-4 text-center">
                     <p>&copy; 2024 Ikigai. All rights reserved.</p>
                 </div>
-            </footer>
+            </footer> */}
         </div >
 
 

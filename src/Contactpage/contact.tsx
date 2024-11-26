@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Mail } from "lucide-react"
+import Footer from "@/home/footer";
 
 
 
@@ -94,11 +95,7 @@ function Contact() {
                     </Card>
                 </div>
             </main>
-            <footer className="bg-gray-800 py-10 text-gray-300">
-                <div className="container mx-auto px-4 text-center">
-                    <p>&copy; 2024 Ikigai. All rights reserved.</p>
-                </div>
-            </footer>
+            <Footer />
         </div>
     )
 }

@@ -2,6 +2,7 @@ import Header from "@/home/header";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { TrendingUp, Target, Zap } from "lucide-react"
+import Footer from "@/home/footer";
 function About() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
@@ -94,8 +95,7 @@ function About() {
                     </div>
                 </section>
             </main>
-
-
+            <Footer />
         </div>
     )
 }

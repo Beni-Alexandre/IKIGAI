@@ -11,7 +11,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-
+import { Search } from 'lucide-react';
+import Footer from "@/home/footer";
 
 
 
@@ -41,14 +42,17 @@ function Products() {
             <Header />
             <main className="container mx-auto px-4 py-12" >
                 <h1 className="mb-8 text-4xl font-bold text-center">Our Products</h1>
-                <div className="w-full md:w-1/3 relative">
-                    <Input
-                        type="text"
-                        placeholder="Search products..."
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className="pl-10"
-                    />
+                <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+                    <div className="w-full md:w-1/3 relative">
+                        <Input
+                            type="text"
+                            placeholder="Search products..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="pl-10"
+                        />
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                    </div>
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {products.map((products) =>
@@ -70,6 +74,7 @@ function Products() {
                     )}
                 </div>
             </main>
+            <Footer />
         </div>
     )
 }

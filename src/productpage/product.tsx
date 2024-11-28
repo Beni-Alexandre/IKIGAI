@@ -92,10 +92,11 @@ function Products() {
                             type="text"
                             placeholder="Search products..."
                             value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
+                            onChange={(e) => { setSearchTerm(e.target.value) }}
                             className="pl-10"
                         />
                         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+
                     </div>
                     <div className="flex gap-4">
                         <Select value={selectedCategory} onValueChange={setSelectedCategory}>
@@ -122,16 +123,16 @@ function Products() {
                     </div>
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {products.map((products) =>
+                    {filteredProducts.map((product) =>
 
-                        <Card key={products.id}>
+                        <Card key={product.id}>
                             <CardHeader>
-                                <CardTitle>{products.name}</CardTitle>
-                                <CardDescription>{products.price.toFixed(1)} FCFA</CardDescription>
+                                <CardTitle>{product.name}</CardTitle>
+                                <CardDescription>{product.price.toFixed(1)} FCFA</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <p>Category: {products.category}</p>
-                                <Badge>  {products.badge}</Badge>
+                                <p>Category: {product.category}</p>
+                                <Badge>  {product.badge}</Badge>
                             </CardContent>
                             <CardFooter>
                                 <Button className="w-full">Add to cart</Button>
@@ -140,6 +141,8 @@ function Products() {
                         </Card>
                     )}
                 </div>
+
+
                 {filteredProducts.length === 0 && (
                     <p className="text-center text-gray-500 mt-8">No products found. Try adjusting your filters.</p>
                 )}

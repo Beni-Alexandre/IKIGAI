@@ -33,7 +33,6 @@ import {
 } from "@/components/ui/dialog"
 
 
-
 const initialProducts = [
     { id: 1, name: "Palm Oil", price: 1000, category: "Food", badge: "Hot" },
     { id: 2, name: "Cannelle", price: 10000, category: "Grocery", badge: "Best Seller" },
@@ -125,7 +124,21 @@ function Products() {
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {filteredProducts.map((product) =>
 
-                        <Card key={product.id}>
+                        <Card key={product.id} className="flex flex-col">
+                            {/* <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-lg">
+                                <img
+                                    src="IKIGAI/images/oil1.jpg"
+                                    alt={product.name}
+                                    // fill
+                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                />
+                                {product.badge && (
+                                    <Badge className="absolute top-2 right-2 z-10">
+                                        {product.badge}
+                                    </Badge>
+                                )}
+                            </div> */}
                             <CardHeader>
                                 <CardTitle>{product.name}</CardTitle>
                                 <CardDescription>{product.price.toFixed(1)} FCFA</CardDescription>

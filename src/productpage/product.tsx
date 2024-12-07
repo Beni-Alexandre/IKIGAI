@@ -34,19 +34,19 @@ import {
 
 
 const initialProducts = [
-    { id: 1, name: "Palm Oil", price: 1000, category: "Food", badge: "Hot", image: "/images/img07.jpg" },
-    { id: 2, name: "Cannelle", price: 10000, category: "Grocery", badge: "Best Seller", image: "/images/oil1.jpg" },
-    { id: 3, name: "Curcuma", price: 8000, category: "Grocery", badge: "New", image: "/images/oil1.jpg" },
-    { id: 4, name: "Ail", price: 13000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
-    { id: 5, name: "Gigembre", price: 7000, category: "Grocery", badge: "Trending", image: "/images/oil1.jpg" },
-    { id: 6, name: "Clou de girofle", price: 15000, category: "Grocery", badge: "Eco-friendly", image: "/images/oil1.jpg" },
-    { id: 7, name: "Badiane", price: 8000, category: "Grocery", badge: "Hot", image: "/images/oil1.jpg" },
-    { id: 8, name: "Thym", price: 5000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
-    { id: 9, name: "Romarin", price: 9000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
-    { id: 10, name: "Poivre noir ", price: 10000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
-    { id: 11, name: "Poivre long", price: 6000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
-    { id: 12, name: "Piment rouge", price: 3500, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
-    { id: 13, name: "Laurier", price: 5000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
+    { id: 1, name: "Palm Oil", price: 1000, category: "Food", badge: "Hot", image: "/images/palm oil 01.jpg" },
+    { id: 2, name: "Cannelle", price: 10000, category: "Grocery", badge: "Best Seller", image: "/images/cannelle01.jpg" },
+    { id: 3, name: "Curcuma", price: 8000, category: "Grocery", badge: "New", image: "/images/curcuma01.jpg" },
+    { id: 4, name: "Ail", price: 13000, category: "Grocery", badge: "Top Rated", image: "/images/garlic01.jpg" },
+    { id: 5, name: "Gingembre", price: 7000, category: "Grocery", badge: "Trending", image: "/images/gingembre01.jpg" },
+    { id: 6, name: "Clou de girofle", price: 15000, category: "Grocery", badge: "Eco-friendly", image: "/images/clou de girofle01.jpg" },
+    { id: 7, name: "Badiane", price: 8000, category: "Grocery", badge: "Hot", image: "/images/badiane01.jpg" },
+    { id: 8, name: "Thym", price: 5000, category: "Grocery", badge: "Top Rated", image: "/images/thym01.jpg" },
+    { id: 9, name: "Romarin", price: 9000, category: "Grocery", badge: "Top Rated", image: "/images/romarin01.jpg" },
+    { id: 10, name: "Poivre noir ", price: 10000, category: "Grocery", badge: "Top Rated", image: "/images/poivrenoir01.jpg" },
+    { id: 11, name: "Poivre long", price: 6000, category: "Grocery", badge: "Top Rated", image: "/images/poivrelong01.jpg" },
+    { id: 12, name: "Piment rouge", price: 3500, category: "Grocery", badge: "Top Rated", image: "/images/pimmentrouge01.jpg" },
+    { id: 13, name: "Laurier", price: 5000, category: "Grocery", badge: "Top Rated", image: "/images/laurier01.jpg" },
 
 
 ]
@@ -130,8 +130,8 @@ function Products() {
                                     src={product.image}
                                     alt={product.name}
 
-                                    className="object-cover"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    className="object-cover w-full h-full"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 120px) 50vw, 33vw"
                                 />
 
 

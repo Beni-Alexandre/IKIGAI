@@ -34,19 +34,19 @@ import {
 
 
 const initialProducts = [
-    { id: 1, name: "Palm Oil", price: 1000, category: "Food", badge: "Hot" },
-    { id: 2, name: "Cannelle", price: 10000, category: "Grocery", badge: "Best Seller" },
-    { id: 3, name: "Curcuma", price: 8000, category: "Grocery", badge: "New" },
-    { id: 4, name: "Ail", price: 13000, category: "Grocery", badge: "Top Rated" },
-    { id: 5, name: "Gigembre", price: 7000, category: "Grocery", badge: "Trending" },
-    { id: 6, name: "Clou de girofle", price: 15000, category: "Grocery", badge: "Eco-friendly" },
-    { id: 7, name: "Badiane", price: 8000, category: "Grocery", badge: "Hot" },
-    { id: 8, name: "Thym", price: 5000, category: "Grocery", badge: "Top Rated" },
-    { id: 9, name: "Romarin", price: 9000, category: "Grocery", badge: "Top Rated" },
-    { id: 10, name: "Poivre noir ", price: 10000, category: "Grocery", badge: "Top Rated" },
-    { id: 11, name: "Poivre long", price: 6000, category: "Grocery", badge: "Top Rated" },
-    { id: 12, name: "Piment rouge", price: 3500, category: "Grocery", badge: "Top Rated" },
-    { id: 13, name: "Laurier", price: 5000, category: "Grocery", badge: "Top Rated" },
+    { id: 1, name: "Palm Oil", price: 1000, category: "Food", badge: "Hot", image: "/images/img07.jpg" },
+    { id: 2, name: "Cannelle", price: 10000, category: "Grocery", badge: "Best Seller", image: "/images/oil1.jpg" },
+    { id: 3, name: "Curcuma", price: 8000, category: "Grocery", badge: "New", image: "/images/oil1.jpg" },
+    { id: 4, name: "Ail", price: 13000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
+    { id: 5, name: "Gigembre", price: 7000, category: "Grocery", badge: "Trending", image: "/images/oil1.jpg" },
+    { id: 6, name: "Clou de girofle", price: 15000, category: "Grocery", badge: "Eco-friendly", image: "/images/oil1.jpg" },
+    { id: 7, name: "Badiane", price: 8000, category: "Grocery", badge: "Hot", image: "/images/oil1.jpg" },
+    { id: 8, name: "Thym", price: 5000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
+    { id: 9, name: "Romarin", price: 9000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
+    { id: 10, name: "Poivre noir ", price: 10000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
+    { id: 11, name: "Poivre long", price: 6000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
+    { id: 12, name: "Piment rouge", price: 3500, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
+    { id: 13, name: "Laurier", price: 5000, category: "Grocery", badge: "Top Rated", image: "/images/oil1.jpg" },
 
 
 ]
@@ -55,7 +55,7 @@ function Products() {
     const [searchTerm, setSearchTerm] = useState("")
     const [selectedCategory, setSelectedCategory] = useState("All")
     const [sortBy, setSortBy] = useState("name")
-    const [newProduct, setNewProduct] = useState({ name: '', price: '', category: '', badge: '' })
+    const [newProduct, setNewProduct] = useState({ name: '', price: '', category: '', badge: '', image: '' })
 
     const filteredProducts = products
         .filter(product =>
@@ -77,7 +77,7 @@ function Products() {
             price: parseFloat(newProduct.price)
         }
         setProducts([...products, productToAdd])
-        setNewProduct({ name: '', price: '', category: '', badge: '' })
+        setNewProduct({ name: '', price: '', category: '', badge: '', image: '' })
     }
 
     return (
@@ -125,20 +125,22 @@ function Products() {
                     {filteredProducts.map((product) =>
 
                         <Card key={product.id} className="flex flex-col">
-                            {/* <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-lg">
+                            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-lg">
                                 <img
-                                    src="IKIGAI/images/oil1.jpg"
+                                    src={product.image}
                                     alt={product.name}
-                                    // fill
+
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
+
+
                                 {product.badge && (
                                     <Badge className="absolute top-2 right-2 z-10">
                                         {product.badge}
                                     </Badge>
                                 )}
-                            </div> */}
+                            </div>
                             <CardHeader>
                                 <CardTitle>{product.name}</CardTitle>
                                 <CardDescription>{product.price.toFixed(1)} FCFA</CardDescription>

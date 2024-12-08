@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Header from "@/home/header";
 import {
     Card,
@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Search, SlidersHorizontal, Upload } from 'lucide-react';
+import { Search, SlidersHorizontal, Upload, ImageIcon } from 'lucide-react';
 import Footer from "@/home/footer";
 import {
     Select,
@@ -57,6 +57,8 @@ function Products() {
     const [sortBy, setSortBy] = useState("name")
     const [newProduct, setNewProduct] = useState({ name: '', price: '', category: '', badge: '', image: '' })
 
+    const fileInputRef = useRef<HTMLInputElement>(null)
+
     const filteredProducts = products
         .filter(product =>
             (selectedCategory === "All" || product.category === selectedCategory) &&
@@ -79,7 +81,16 @@ function Products() {
         setProducts([...products, productToAdd])
         setNewProduct({ name: '', price: '', category: '', badge: '', image: '' })
     }
-
+    const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0]
+        if (file) {
+            const reader = new FileReader()
+            reader.onloadend = () => {
+                setNewProduct({ ...newProduct, image: reader.result as string })
+            }
+            reader.readAsDataURL(file)
+        }
+    }
     return (
         <div>
             <Header />
@@ -130,7 +141,7 @@ function Products() {
                                     src={product.image}
                                     alt={product.name}
 
-                                    className="object-cover w-full h-full"
+                                    className="object-cover w-full h-full "
                                     sizes="(max-width: 768px) 100vw, (max-width: 120px) 50vw, 33vw"
                                 />
 
@@ -230,6 +241,29 @@ function Products() {
                                             onChange={(e) => setNewProduct({ ...newProduct, badge: e.target.value })}
                                             className="col-span-3"
                                         />
+                                    </div>
+                                    <div className="grid grid-cols-4 items-center gap-4">
+                                        <label htmlFor="image" className="text-right">
+                                            UploadImage
+                                        </label>
+                                        <div className="col-span-3">
+                                            <input type="file"
+                                                id="image"
+                                                accept="image/"
+                                                onChange={handleImageUpload}
+                                                className="hidden"
+                                                ref={fileInputRef}
+                                            />
+                                            <Button
+                                                type="button"
+                                                variant="outline"
+                                                onClick={() => fileInputRef.current?.click()}
+                                                className="w-full"
+                                            >
+                                                <ImageIcon className="mr-2 h-4 w-4" />
+                                                {/* {newProduct.image !== '/placeholder.svg?height=400&width=600'? t.imageUploaded :t.selectImage} */}
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
                                 <DialogFooter>

@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Search, SlidersHorizontal, Upload, ImageIcon } from 'lucide-react';
+import { Search, SlidersHorizontal, Upload, ImageIcon, ShoppingCart } from 'lucide-react';
 import Footer from "@/home/footer";
 import {
     Select,
@@ -161,8 +161,37 @@ function Products() {
                                 <Badge>  {product.badge}</Badge>
                             </CardContent>
                             <CardFooter>
-                                <Button className="w-full">Add to cart</Button>
-
+                                {/* <Button className="w-full">Order</Button> */}
+                                <Dialog>
+                                    <DialogTrigger asChild>
+                                        <Button className="w-full">Order</Button>
+                                    </DialogTrigger>
+                                    <DialogContent className="sm:max-w-[425px]">
+                                        <DialogHeader>
+                                            <DialogTitle>Order this product</DialogTitle>
+                                            <DialogDescription>
+                                                Choose the quantity and order.
+                                            </DialogDescription>
+                                        </DialogHeader>
+                                        <div className="grid gap-4 py-4">
+                                            <div className="grid grid-cols-4 items-center gap-4">
+                                                <Label htmlFor="name" className="text-right">
+                                                    Name
+                                                </Label>
+                                                <Input id="name" value="Pedro Duarte" className="col-span-3" />
+                                            </div>
+                                            <div className="grid grid-cols-4 items-center gap-4">
+                                                <Label htmlFor="username" className="text-right">
+                                                    Username
+                                                </Label>
+                                                <Input id="username" value="@peduarte" className="col-span-3" />
+                                            </div>
+                                        </div>
+                                        <DialogFooter>
+                                            <Button type="submit">Save changes</Button>
+                                        </DialogFooter>
+                                    </DialogContent>
+                                </Dialog>
                             </CardFooter>
                         </Card>
                     )}

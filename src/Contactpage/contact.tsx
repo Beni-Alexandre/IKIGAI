@@ -18,13 +18,39 @@ import Footer from "@/home/footer";
 
 function Contact() {
     const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'submitted' | 'error'>('idle')
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    //     event.preventDefault()
+    //     setFormStatus('submitting')
+
+    //     await new Promise(resolve => setTimeout(resolve, 2000))
+    //     setFormStatus('submitted')
+    // }
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const formData = new FormData(event.currentTarget);
         event.preventDefault()
         setFormStatus('submitting')
 
         await new Promise(resolve => setTimeout(resolve, 2000))
         setFormStatus('submitted')
-    }
+        formData.append("access_key", "bfda3bc5-7777-452f-a676-d8838af007ec");
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: json
+        }).then((res) => res.json());
+
+        if (res.success) {
+            console.log("Success", res);
+        }
+    };
     return (
         <div>
             <Header />
@@ -40,7 +66,7 @@ function Contact() {
                             <CardDescription>We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <form onSubmit={handleSubmit} className="space-y-4">
+                            <form onSubmit={onSubmit} className="space-y-4">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
                                     <Input id="name" name="name" required />

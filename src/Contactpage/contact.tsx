@@ -4,16 +4,16 @@ import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
+
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { MapPin, Phone, Mail } from "lucide-react"
+import { MapPin, Phone, Mail, MessageCircleMore } from "lucide-react"
 import Footer from "@/home/footer";
-
+import { Link } from "react-router-dom";
 
 
 function Contact() {
@@ -100,17 +100,28 @@ function Contact() {
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <div className="flex items-center space-x-2">
-                                <MapPin className="h-5 w-5 text-blue-500" />
+                                <MapPin className="h-5 w-5 text-blue-500" />:
                                 <span>Abomey-Calavi Benin Republic</span>
                             </div>
                             <div className="flex items-center space-x-2">
-                                <Phone className="h-5 w-5 text-blue-500" />
-                                <span>+229 50 61 72 75</span>
+                                < MessageCircleMore className="h-5 w-5 text-blue-500" />:
+                                <Link to="https://wa.me/22950617275 ">
+                                    <span>+229 0150617275</span>
+                                </Link>
                             </div>
                             <div className="flex items-center space-x-2">
-                                <Mail className="h-5 w-5 text-blue-500" />
-                                <span>ikigaitrade25@gmail.com</span>
+                                <Phone className="h-5 w-5 text-blue-500" />:
+                                <a href="tel:+229 0150617275"> <span>+229 0150617275</span></a>
+
+
                             </div>
+                            <div className="flex items-center space-x-2">
+                                <Mail className="h-5 w-5 text-blue-500" />:
+
+                                <span>ikigaitrade25@gmail.com</span>
+
+                            </div>
+
                             <div className="mt-6">
                                 <h3 className="text-lg font-semibold mb-2">Business Hours</h3>
                                 <p>Monday - Friday: 9am - 6pm</p>

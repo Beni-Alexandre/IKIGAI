@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Search, SlidersHorizontal, Upload, ImageIcon, ShoppingCart } from 'lucide-react';
+import { Search, Upload, ImageIcon } from 'lucide-react';
 import Footer from "@/home/footer";
 import {
     Select,

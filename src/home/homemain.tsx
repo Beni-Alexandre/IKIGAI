@@ -83,9 +83,11 @@ function Homemain() {
                 <p className="mb-10 text-xl text-gray-600">
                     Be the first to know about our latest products and upcoming trends.
                 </p>
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                    Sign Up for Updates
-                </Button>
+                <Link to="/contact">
+                    <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                        Contact us for more Informations
+                    </Button>
+                </Link>
             </section>
 
             {/* <footer className="bg-gray-800 py-10 text-gray-300">

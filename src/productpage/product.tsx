@@ -8,7 +8,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Search, Upload, ImageIcon } from 'lucide-react';
@@ -21,16 +21,16 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 
-import { Label } from "@/components/ui/label"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-    DialogFooter,
-} from "@/components/ui/dialog"
+// import { Label } from "@/components/ui/label"
+// import {
+//     Dialog,
+//     DialogContent,
+//     DialogDescription,
+//     DialogHeader,
+//     DialogTitle,
+//     DialogTrigger,
+//     DialogFooter,
+// } from "@/components/ui/dialog"
 
 
 const initialProducts = [
@@ -162,7 +162,7 @@ function Products() {
                             </CardContent>
                             <CardFooter>
                                 {/* <Button className="w-full">Order</Button> */}
-                                <Dialog>
+                                {/* <Dialog>
                                     <DialogTrigger asChild>
                                         <Button className="w-full">Order</Button>
                                     </DialogTrigger>
@@ -175,12 +175,18 @@ function Products() {
                                         </DialogHeader>
                                         <div className="grid gap-4 py-4">
                                             <div className="grid grid-cols-4 items-center gap-4">
-                                                <Label htmlFor="name" className="text-right">
-                                                    Name
+
+
+                                                <Label htmlFor="quantity" className="text-right">
+                                                    Quantity
                                                 </Label>
-                                                <Input id="name" value="Pedro Duarte" className="col-span-3" />
+                                                <Input type="number" id="name" min={1} className="col-span-3" />
                                             </div>
                                             <div className="grid grid-cols-4 items-center gap-4">
+                                                <Label htmlFor="username" className="text-right">
+                                                    Username
+                                                </Label>
+                                                <Input id="username" value="@peduarte" className="col-span-3" />
                                                 <Label htmlFor="username" className="text-right">
                                                     Username
                                                 </Label>
@@ -188,10 +194,10 @@ function Products() {
                                             </div>
                                         </div>
                                         <DialogFooter>
-                                            <Button type="submit">Save changes</Button>
+                                            <Button type="submit">Send the order</Button>
                                         </DialogFooter>
                                     </DialogContent>
-                                </Dialog>
+                                </Dialog> */}
                             </CardFooter>
                         </Card>
                     )}
@@ -202,8 +208,9 @@ function Products() {
                     <p className="text-center text-gray-500 mt-8">No products found. Try adjusting your filters.</p>
                 )}
 
-                <div className="mt-12">
-                    <h2 className="text-2xl font-bold mb-4">Add New Product</h2>
+                {/* <div className="mt-12"> */}
+                {/* <h2 className="text-2xl font-bold mb-4">Add New Product</h2> */}
+                {/* 
                     <Dialog>
                         <DialogTrigger asChild>
                             <Button>
@@ -290,21 +297,22 @@ function Products() {
                                                 className="w-full"
                                             >
                                                 <ImageIcon className="mr-2 h-4 w-4" />
-                                                {/* {newProduct.image !== '/placeholder.svg?height=400&width=600'? t.imageUploaded :t.selectImage} */}
-                                            </Button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <DialogFooter>
-                                    <Button type="submit">Save Product</Button>
-                                </DialogFooter>
-                            </form>
-                        </DialogContent>
-                    </Dialog>
-                </div>
-            </main>
-            <Footer />
+                                                {/* {newProduct.image !== '/placeholder.svg?height=400&width=600'? t.imageUploaded :t.selectImage} 
+                </Button>
         </div>
+                                    </div >
+                                </div >
+        <DialogFooter>
+            <Button type="submit">Save Product</Button>
+        </DialogFooter>
+                            </form >
+                        </DialogContent >
+                    </Dialog > */
+                }
+                {/* </div > */}
+            </main >
+            <Footer />
+        </div >
     )
 }
 export default Products; 

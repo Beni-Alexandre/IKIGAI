@@ -76,7 +76,7 @@ function About() {
                     </Card>
                 </section>
 
-                <section>
+                {/* <section>
                     <h2 className="text-2xl font-bold mb-6">Our Team</h2>
                     <div className="grid gap-6 md:grid-cols-3">
                         {[
@@ -93,7 +93,7 @@ function About() {
                             </Card>
                         ))}
                     </div>
-                </section>
+                </section> */}
             </main>
             <Footer />
         </div>

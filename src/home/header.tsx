@@ -17,7 +17,7 @@ function Header() {
         <div>
             <header className="bg-white shadow-sm">
                 <nav>
-                    <div className="text-2xl font-bold text-blue-600">Ikigai</div>
+                    <Link to="/">    <div className="text-2xl font-bold text-blue-600">Ikigai</div></Link>
 
 
                     <div className="space-x-4">

@@ -15,72 +15,75 @@ function Homemain() {
     <div>
       <section className="bg-blue-600 text-white">
         <div className="container mx-auto px-4 py-20 text-center"></div>
+
         <h1 className="mb-6 text-4xl font-extrabold leading-tight lg:text-5xl">
-          Discover Products That Match Your Moment
+          Découvrez des produits adaptés à votre moment
         </h1>
         <p className="mb-10 text-xl">
-          Ikigai brings you the most relevant and in-demand items, perfectly
-          aligned with current trends and seasons.
+          Ikigai vous propose les articles les plus pertinents et les plus
+          recherchés, parfaitement en phase avec les tendances et les saisons
+          actuelles.
         </p>
         <Link to="/product">
           {" "}
           <Button className="explore_button" size="lg" variant="secondary">
-            Explore Our Collection
+            Explorez notre collection
           </Button>
         </Link>
       </section>
       <section className="reason">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold">
-            Why Choose IKIGAI
+            Pourquoi choisir IKIGAI
           </h2>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <Card>
             <CardHeader>
               <TrendingUp className="h-10 w-10 text-blue-500" />
-              <CardTitle>Trend-Responsive</CardTitle>
+              <CardTitle>Adapté aux tendances</CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
-                We adapt our product range to match current market demands and
-                consumption trends.
+                Nous adaptons notre gamme de produits aux exigences actuelles du
+                marché et aux tendances de consommation.
               </CardDescription>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
               <ShoppingBag className="h-10 w-10 text-green-500" />
-              <CardTitle>Curated Selection</CardTitle>
+              <CardTitle>Sélection minutieuse</CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
-                Our products are carefully selected to meet the evolving
-                preferences of our customers.
+                Nos produits sont soigneusement sélectionnés pour répondre aux
+                préférences évolutives de nos clients.
               </CardDescription>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
               <Gift className="h-10 w-10 text-red-500" />
-              <CardTitle>Seasonal Specials</CardTitle>
+              <CardTitle>Offres saisonnières</CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
-                We offer products that resonate with the spirit of each season
-                and festive period.
+                Nous proposons des produits qui résonnent avec l'esprit de
+                chaque saison et période festive.
               </CardDescription>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
               <Sun className="h-10 w-10 text-yellow-500" />
-              <CardTitle>Always Relevant</CardTitle>
+              <CardTitle>Toujours Pertinent</CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
-                Our ever-evolving product range ensures you always find what you
-                need, when you need it.
+                Notre gamme de produits en constante évolution vous garantit de
+                toujours trouver ce dont vous avez besoin, quand vous en avez
+                besoin.
               </CardDescription>
             </CardContent>
           </Card>
@@ -88,22 +91,19 @@ function Homemain() {
       </section>
 
       <section className="container mx-auto px-4 py-20 text-center">
-        <h2 className="mb-6 text-3xl font-bold">Stay Ahead with Ikigai.</h2>
+        <h2 className="mb-6 text-3xl font-bold">
+          Restez en contact avec Ikigai.
+        </h2>
         <p className="mb-10 text-xl text-gray-600">
-          Be the first to know about our latest products and upcoming trends.
+          Soyez le premier à découvrir nos nouveaux produits et les tendances à
+          venir.
         </p>
         <Link to="/contact">
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-            Contact us for more Informations
+            Contactez-nous pour plus d'informations.
           </Button>
         </Link>
       </section>
-
-      {/* <footer className="bg-gray-800 py-10 text-gray-300">
-                <div className="container mx-auto px-4 text-center">
-                    <p>&copy; 2024 Ikigai. All rights reserved.</p>
-                </div>
-            </footer> */}
     </div>
   );
 }

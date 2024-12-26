@@ -45,14 +45,15 @@ function Contact() {
     <div>
       <Header />
       <main className="container mx-auto px-4 py-12">
-        <h1 className="mb-8 text-4xl font-bold text-center">Contact Us</h1>
+        <h1 className="mb-8 text-4xl font-bold text-center">Contactez-nous</h1>
         <div className="grid gap-8 md:grid-cols-2">
           <Card>
             <CardHeader>
-              <CardTitle>Send Us a Message</CardTitle>
+              <CardTitle>Envoyez-nous un message</CardTitle>
               <CardDescription>
-                We'd love to hear from you. Fill out the form below and we'll
-                get back to you as soon as possible.
+                Nous serions ravis d'avoir de vos nouvelles. Remplissez le
+                formulaire ci-dessous et nous vous répondrons dans les plus
+                brefs délais.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -62,7 +63,7 @@ function Contact() {
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Name
+                    Nom
                   </label>
                   <Input id="name" name="name" required />
                 </div>
@@ -85,16 +86,19 @@ function Contact() {
                   <Textarea id="message" name="message" required />
                 </div>
                 <Button type="submit" disabled={formStatus === "submitting"}>
-                  {formStatus === "submitting" ? "Sending..." : "Send Message"}
+                  {formStatus === "submitting"
+                    ? "Envoi en cours..."
+                    : "Envoyer le message"}
                 </Button>
                 {formStatus === "submitted" && (
                   <p className="text-green-600">
-                    Thank you for your message. We'll be in touch soon!
+                    Merci pour votre message. Nous vous contacterons bientôt !
                   </p>
                 )}
                 {formStatus === "error" && (
                   <p className="text-red-600">
-                    There was an error sending your message. Please try again.
+                    Une erreur s'est produite lors de l'envoi de votre message.
+                    Veuillez réessayer.
                   </p>
                 )}
               </form>
@@ -102,9 +106,9 @@ function Contact() {
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Contact Information</CardTitle>
+              <CardTitle>Contacts infos</CardTitle>
               <CardDescription>
-                Here are other ways you can reach us:
+                Voici d'autres moyens de nous contacter :
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -130,10 +134,10 @@ function Contact() {
                 <span>ikigaitrade25@gmail.com</span>
               </div>
               <div className="mt-6">
-                <h3 className="text-lg font-semibold mb-2">Business Hours</h3>
-                <p>Monday - Friday: 9am - 6pm</p>
-                <p>Saturday: 10am - 4pm</p>
-                <p>Sunday: Closed</p>
+                <h3 className="text-lg font-semibold mb-2">Nos horaires</h3>
+                <p>Du lundi au vendredi : 9h - 18h</p>
+                <p>Samedi : 10h - 16h</p>
+                <p>Dimanche : Fermé</p>
               </div>
             </CardContent>
           </Card>

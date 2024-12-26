@@ -25,20 +25,20 @@ function Header() {
               <ul>
                 <Link to="/">
                   {" "}
-                  <Button variant="ghost">HOME</Button>
+                  <Button variant="ghost">ACCEUIL</Button>
                 </Link>
 
                 <Link to="/about">
                   {" "}
-                  <Button variant="ghost">ABOUT-US</Button>
+                  <Button variant="ghost">A PROPOS</Button>
                 </Link>
                 <Link to="/product">
                   {" "}
-                  <Button variant="ghost">PRODUCTS</Button>
+                  <Button variant="ghost">CATALOGUE</Button>
                 </Link>
                 <Link to="/contact">
                   {" "}
-                  <Button variant="ghost">CONTACT-US</Button>
+                  <Button variant="ghost">CONTACTS</Button>
                 </Link>
               </ul>
             </div>

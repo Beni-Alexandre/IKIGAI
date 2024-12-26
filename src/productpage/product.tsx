@@ -11,8 +11,8 @@ import {
 // import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Search, Upload, ImageIcon } from "lucide-react";
+
+import { Search } from "lucide-react";
 import Footer from "@/home/footer";
 import {
   Select,
@@ -21,22 +21,22 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-  DialogFooter,
-} from "@/components/ui/dialog";
+// import { Label } from "@/components/ui/label";
+// import {
+//   Dialog,
+//   DialogContent,
+//   DialogDescription,
+//   DialogHeader,
+//   DialogTitle,
+//   DialogTrigger,
+//   DialogFooter,
+// } from "@/components/ui/dialog";
 const initialProducts = [
   {
     id: 1,
-    name: "Palm Oil",
+    name: "Huile de Palme",
     price: 1000,
-    category: "Food",
+    category: "Aliment",
     badge: "Hot",
     image: "/images/palm oil 01.jpg",
   },
@@ -44,7 +44,7 @@ const initialProducts = [
     id: 2,
     name: "Cannelle",
     price: 10000,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "Best Seller",
     image: "/images/cannelle01.jpg",
   },
@@ -52,7 +52,7 @@ const initialProducts = [
     id: 3,
     name: "Curcuma",
     price: 8000,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "New",
     image: "/images/curcuma01.jpg",
   },
@@ -60,7 +60,7 @@ const initialProducts = [
     id: 4,
     name: "Ail",
     price: 13000,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "Top Rated",
     image: "/images/garlic01.jpg",
   },
@@ -68,7 +68,7 @@ const initialProducts = [
     id: 5,
     name: "Gingembre",
     price: 7000,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "Trending",
     image: "/images/gingembre01.jpg",
   },
@@ -76,7 +76,7 @@ const initialProducts = [
     id: 6,
     name: "Clou de girofle",
     price: 15000,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "Eco-friendly",
     image: "/images/clou de girofle01.jpg",
   },
@@ -84,7 +84,7 @@ const initialProducts = [
     id: 7,
     name: "Badiane",
     price: 8000,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "Hot",
     image: "/images/badiane01.jpg",
   },
@@ -92,7 +92,7 @@ const initialProducts = [
     id: 8,
     name: "Thym",
     price: 5000,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "Top Rated",
     image: "/images/thym01.jpg",
   },
@@ -100,7 +100,7 @@ const initialProducts = [
     id: 9,
     name: "Romarin",
     price: 9000,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "Top Rated",
     image: "/images/romarin01.jpg",
   },
@@ -108,7 +108,7 @@ const initialProducts = [
     id: 10,
     name: "Poivre noir ",
     price: 10000,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "Top Rated",
     image: "/images/poivrenoir01.jpg",
   },
@@ -116,7 +116,7 @@ const initialProducts = [
     id: 11,
     name: "Poivre long",
     price: 6000,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "Top Rated",
     image: "/images/poivrelong01.jpg",
   },
@@ -124,7 +124,7 @@ const initialProducts = [
     id: 12,
     name: "Piment rouge",
     price: 3500,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "Top Rated",
     image: "/images/pimmentrouge01.jpg",
   },
@@ -132,7 +132,7 @@ const initialProducts = [
     id: 13,
     name: "Laurier",
     price: 5000,
-    category: "Grocery",
+    category: "Épicerie",
     badge: "Top Rated",
     image: "/images/laurier01.jpg",
   },
@@ -142,14 +142,14 @@ function Products() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("name");
-  const [newProduct, setNewProduct] = useState({
-    name: "",
-    price: "",
-    category: "",
-    badge: "",
-    image: "",
-  });
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  //   const [newProduct, setNewProduct] = useState({
+  //     name: "",
+  //     price: "",
+  //     category: "",
+  //     badge: "",
+  //     image: "",
+  //   });
+  //   const fileInputRef = useRef<HTMLInputElement>(null);
   const filteredProducts = products
     .filter(
       (product) =>
@@ -163,36 +163,36 @@ function Products() {
       return 0;
     });
 
-  const handleAddProduct = (e: React.FormEvent) => {
-    e.preventDefault();
-    const productToAdd = {
-      ...newProduct,
-      id: products.length + 1,
-      price: parseFloat(newProduct.price),
-    };
-    setProducts([...products, productToAdd]);
-    setNewProduct({ name: "", price: "", category: "", badge: "", image: "" });
-  };
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setNewProduct({ ...newProduct, image: reader.result as string });
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  //   const handleAddProduct = (e: React.FormEvent) => {
+  //     e.preventDefault();
+  //     const productToAdd = {
+  //       ...newProduct,
+  //       id: products.length + 1,
+  //       price: parseFloat(newProduct.price),
+  //     };
+  //     setProducts([...products, productToAdd]);
+  //     setNewProduct({ name: "", price: "", category: "", badge: "", image: "" });
+  //   };
+  //   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //     const file = e.target.files?.[0];
+  //     if (file) {
+  //       const reader = new FileReader();
+  //       reader.onloadend = () => {
+  //         setNewProduct({ ...newProduct, image: reader.result as string });
+  //       };
+  //       reader.readAsDataURL(file);
+  //     }
+  //   };
   return (
     <div>
       <Header />
       <main className="container mx-auto px-4 py-12">
-        <h1 className="mb-8 text-4xl font-bold text-center">Our Products</h1>
+        <h1 className="mb-8 text-4xl font-bold text-center">Nos Produits</h1>
         <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
           <div className="w-full md:w-1/3 relative">
             <Input
               type="text"
-              placeholder="Search products..."
+              placeholder="Rechercher des produits..."
               value={searchTerm}
               onChange={(e) => {
                 setSearchTerm(e.target.value);
@@ -213,9 +213,9 @@ function Products() {
                 <SelectValue placeholder="Category" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="All">All Categories</SelectItem>
-                <SelectItem value="Grocery">Grocery</SelectItem>
-                <SelectItem value="Food">Food</SelectItem>
+                <SelectItem value="All">Toutes catégories</SelectItem>
+                <SelectItem value="Épicerie">Épicerie</SelectItem>
+                <SelectItem value="Aliment">Aliment</SelectItem>
               </SelectContent>
             </Select>
             <Select value={sortBy} onValueChange={setSortBy}>
@@ -253,14 +253,14 @@ function Products() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p>Category: {product.category}</p>
+                <p>Catégorie: {product.category}</p>
                 <Badge> {product.badge}</Badge>
               </CardContent>
               <CardFooter>
                 {/* <Button className="w-full">Order</Button> */}
-                <Dialog>
+                {/* <Dialog>
                   <DialogTrigger asChild>
-                    <Button className="w-full">Order</Button>
+                    <Button className="w-full">Commander</Button>
                   </DialogTrigger>
                   <DialogContent className="sm:max-w-[425px]">
                     <DialogHeader>
@@ -304,17 +304,17 @@ function Products() {
                       <Button type="submit">Send the order</Button>
                     </DialogFooter>
                   </DialogContent>
-                </Dialog>
+                </Dialog> */}
               </CardFooter>
             </Card>
           ))}
         </div>
         {filteredProducts.length === 0 && (
           <p className="text-center text-gray-500 mt-8">
-            No products found. Try adjusting your filters.
+            Aucun produit trouvé.
           </p>
         )}
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <h2 className="text-2xl font-bold mb-4">Add New Product</h2>
           <Dialog>
             <DialogTrigger asChild>
@@ -374,8 +374,8 @@ function Products() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="All">All Categories</SelectItem>
-                        <SelectItem value="Grocery">Grocery</SelectItem>
-                        <SelectItem value="Food">Food</SelectItem>
+                        <SelectItem value="Épicerie">Épicerie</SelectItem>
+                        <SelectItem value="Aliment">Aliment</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -428,7 +428,7 @@ function Products() {
               </form>
             </DialogContent>
           </Dialog>
-        </div>
+        </div> */}
       </main>
       <Footer />
     </div>

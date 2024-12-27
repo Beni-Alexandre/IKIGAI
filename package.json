@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://beni-alexandre.github.io/IKIGAI/",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@mui/material": "^6.1.10",
@@ -27,6 +30,7 @@
     "react-dom": "^18.3.1",
     "react-i18next": "^15.2.0",
     "react-router-dom": "^6.27.0",
+    "react-scripts": "^5.0.1",
     "styled-components": "^6.1.13",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"

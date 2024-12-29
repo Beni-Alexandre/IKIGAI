@@ -1,9 +1,9 @@
-import Home from "./home/home";
+import Home from "pages/home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./aboutpage/about";
-import Contact from "./Contactpage/contact";
-import Products from "./productpage/product";
-
+import About from "pages/about";
+import Contact from "pages/contact";
+import Products from "pages/product";
+import React from "react";
 function App() {
   return (
     <>

@@ -1,17 +1,20 @@
+import React from "react";
 import { useState } from "react";
-import Header from "@/home/header";
+// import Header from "@/home/header";
+import Header from "components/header";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+} from "components/ui/card";
+import { Input } from "components/ui/input";
+import { Textarea } from "components/ui/textarea";
+import { Button } from "components/ui/button";
 import { MapPin, Phone, Mail, MessageCircleMore } from "lucide-react";
-import Footer from "@/home/footer";
+// import Footer from "@/home/footer";
+import Footer from "components/footer";
 import { Link } from "react-router-dom";
 function Contact() {
   const [formStatus, setFormStatus] = useState<

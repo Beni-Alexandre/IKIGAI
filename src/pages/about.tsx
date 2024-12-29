@@ -1,14 +1,14 @@
-import Header from "@/home/header";
-
+import React from "react";
+import Header from "components/header";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "components/ui/card";
 import { TrendingUp, Target, Zap } from "lucide-react";
-import Footer from "@/home/footer";
+import Footer from "components/footer";
 function About() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">

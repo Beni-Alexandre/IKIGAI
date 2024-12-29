@@ -1,5 +1,6 @@
+import React from "react";
 import { useState, useRef } from "react";
-import Header from "@/home/header";
+import Header from "components/header";
 import {
   Card,
   CardContent,
@@ -7,20 +8,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "components/ui/card";
 // import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
+import { Badge } from "components/ui/badge";
+import { Input } from "components/ui/input";
 
 import { Search } from "lucide-react";
-import Footer from "@/home/footer";
+import Footer from "components/footer";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "components/ui/select";
 // import { Label } from "@/components/ui/label";
 // import {
 //   Dialog,
@@ -139,6 +140,7 @@ const initialProducts = [
 ];
 function Products() {
   const [products, setProducts] = useState(initialProducts);
+
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("name");
@@ -163,26 +165,26 @@ function Products() {
       return 0;
     });
 
-  //   const handleAddProduct = (e: React.FormEvent) => {
-  //     e.preventDefault();
-  //     const productToAdd = {
-  //       ...newProduct,
-  //       id: products.length + 1,
-  //       price: parseFloat(newProduct.price),
+  // const handleAddProduct = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   const productToAdd = {
+  //     ...newProduct,
+  //     id: products.length + 1,
+  //     price: parseFloat(newProduct.price),
+  //   };
+  //   setProducts([...products, productToAdd]);
+  //   setNewProduct({ name: "", price: "", category: "", badge: "", image: "" });
+  // };
+  // const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const file = e.target.files?.[0];
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.onloadend = () => {
+  //       setNewProduct({ ...newProduct, image: reader.result as string });
   //     };
-  //     setProducts([...products, productToAdd]);
-  //     setNewProduct({ name: "", price: "", category: "", badge: "", image: "" });
-  //   };
-  //   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //     const file = e.target.files?.[0];
-  //     if (file) {
-  //       const reader = new FileReader();
-  //       reader.onloadend = () => {
-  //         setNewProduct({ ...newProduct, image: reader.result as string });
-  //       };
-  //       reader.readAsDataURL(file);
-  //     }
-  //   };
+  //     reader.readAsDataURL(file);
+  //   }
+  // };
   return (
     <div>
       <Header />

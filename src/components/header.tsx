@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "components/ui/button";
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { useState } from "react";
-
+import React from "react";
 function Header() {
   const [showNavbar, setShowNavbar] = useState(false);
   const handleShowNavbar = () => {

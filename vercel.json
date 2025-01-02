@@ -11,11 +11,12 @@
         "dest": "/index.html"
       }
     ],
+   
+  
     "rewrites": [
-    {
-      "source": "/:match*",
-      "destination": "/index.html"
-    }
-  ]
+      { "source": "/(.*)", "destination": "/" }
+    ]
+  
+  
   }
   

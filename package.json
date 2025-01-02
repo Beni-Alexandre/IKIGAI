@@ -3,7 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://beni-alexandre.github.io/IKIGAI/",
+  
+    "homepage": "https://beni-alexandre.github.io/IKIGAI/",
+  
+ 
   "scripts": {
     "start": "vite",
     "build": "vite build&& GENERATE_SOURCEMAP=false",

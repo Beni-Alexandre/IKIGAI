@@ -13,5 +13,6 @@ export default defineConfig({
   },
   server: {
     port: 5173  // Ensure Vite is running on the correct port
-  }
+  },
+  build: { rollupOptions: { onwarn(warning, warn) { if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return; warn(warning); }, }, },
 });

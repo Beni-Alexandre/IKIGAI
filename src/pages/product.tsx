@@ -242,11 +242,11 @@ function Products() {
                   className="object-cover w-full h-full "
                   sizes="(max-width: 768px) 100vw, (max-width: 120px) 50vw, 33vw"
                 />
-                {product.badge && (
+{/*                 {product.badge && (
                   <Badge className="absolute top-2 right-2 z-10">
                     {product.badge}
                   </Badge>
-                )}
+                )} */}
               </div>
               <CardHeader>
                 <CardTitle>{product.name}</CardTitle>

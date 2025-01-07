@@ -38,7 +38,7 @@ const initialProducts = [
     name: "Huile de Palme",
     price: 1000,
     category: "Aliment",
-    badge: "Hot",
+    badge: "Chaud",
     image: "/images/palm oil 01.jpg",
   },
   {
@@ -46,7 +46,7 @@ const initialProducts = [
     name: "Cannelle",
     price: 10000,
     category: "Épicerie",
-    badge: "Best Seller",
+    badge: "Plus vendu",
     image: "/images/cannelle01.jpg",
   },
   {
@@ -54,7 +54,7 @@ const initialProducts = [
     name: "Curcuma",
     price: 8000,
     category: "Épicerie",
-    badge: "New",
+    badge: "Nouveau",
     image: "/images/curcuma01.jpg",
   },
   {
@@ -62,7 +62,7 @@ const initialProducts = [
     name: "Ail",
     price: 13000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/garlic01.jpg",
   },
   {
@@ -70,7 +70,7 @@ const initialProducts = [
     name: "Gingembre",
     price: 7000,
     category: "Épicerie",
-    badge: "Trending",
+    badge: "Nouveau",
     image: "/images/gingembre01.jpg",
   },
   {
@@ -78,7 +78,7 @@ const initialProducts = [
     name: "Clou de girofle",
     price: 15000,
     category: "Épicerie",
-    badge: "Eco-friendly",
+    badge: "Nouveau",
     image: "/images/clou de girofle01.jpg",
   },
   {
@@ -86,7 +86,7 @@ const initialProducts = [
     name: "Badiane",
     price: 8000,
     category: "Épicerie",
-    badge: "Hot",
+    badge: "Nouveau",
     image: "/images/badiane01.jpg",
   },
   {
@@ -94,7 +94,7 @@ const initialProducts = [
     name: "Thym",
     price: 5000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/thym01.jpg",
   },
   {
@@ -102,7 +102,7 @@ const initialProducts = [
     name: "Romarin",
     price: 9000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/romarin01.jpg",
   },
   {
@@ -110,7 +110,7 @@ const initialProducts = [
     name: "Poivre noir ",
     price: 10000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/poivrenoir01.jpg",
   },
   {
@@ -118,7 +118,7 @@ const initialProducts = [
     name: "Poivre long",
     price: 6000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meileur",
     image: "/images/poivrelong01.jpg",
   },
   {
@@ -126,7 +126,7 @@ const initialProducts = [
     name: "Piment rouge",
     price: 3500,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/pimmentrouge01.jpg",
   },
   {
@@ -134,7 +134,7 @@ const initialProducts = [
     name: "Laurier",
     price: 5000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/laurier01.jpg",
   },
 ];
@@ -242,11 +242,11 @@ function Products() {
                   className="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 "
                   sizes="(max-width: 768px) 100vw, (max-width: 120px) 50vw, 33vw"
                 />
-{/*                 {product.badge && (
+                {product.badge && (
                   <Badge className="absolute top-2 right-2 z-10">
                     {product.badge}
                   </Badge>
-                )} */}
+                )}
               </div>
               <CardHeader>
                 <CardTitle>{product.name}</CardTitle>
@@ -256,7 +256,7 @@ function Products() {
               </CardHeader>
               <CardContent>
                 <p>Catégorie: {product.category}</p>
-                <Badge> {product.badge}</Badge>
+{/*                 <Badge> {product.badge}</Badge> */}
               </CardContent>
               <CardFooter>
                 {/* <Button className="w-full">Order</Button> */}

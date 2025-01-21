@@ -47,7 +47,7 @@ function Contact() {
   return (
     <div>
       <Header />
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 py-12 h-screen">
         <h1 className="mb-8 text-4xl font-bold text-center">Contactez-nous</h1>
         <div className="grid gap-8 md:grid-cols-2">
           <Card>

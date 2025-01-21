@@ -57,8 +57,14 @@
     --chart-5: 340 75% 55%
   }
 }
+
 html {
   scroll-behavior: smooth;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+ 
+    font-weight: 500;
 }
 @layer base {
   * {
@@ -112,8 +118,8 @@ section {
   display: none;
 }
 
-/*responsive style*/
 
+/* 
 @media (max-width: 768px) {
 
   .menu :not(:last-child) {
@@ -127,16 +133,7 @@ section {
     cursor: pointer;
   }
 
-  /* .menu {
-    position: absolute;
-    right: 0;
-    top: 60px;
-    width: 0px;
-    height: calc(100vh - 60px);
-    transition: all 0.7s ease-in;
-    overflow: hidden;
-    background-color: rgb(255, 255, 255);
-  } */
+  
   .menu {
     position: fixed;
     top: 0;
@@ -162,4 +159,4 @@ section {
     margin-right: unset;
     margin-top: 22px;
   }
-}
+} */

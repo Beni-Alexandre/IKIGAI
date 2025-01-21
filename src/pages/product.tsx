@@ -239,7 +239,7 @@ function Products() {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="object-cover w-full h-full "
+                  className="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 "
                   sizes="(max-width: 768px) 100vw, (max-width: 120px) 50vw, 33vw"
                 />
                 {product.badge && (
@@ -256,7 +256,7 @@ function Products() {
               </CardHeader>
               <CardContent>
                 <p>Catégorie: {product.category}</p>
-                <Badge> {product.badge}</Badge>
+                {/* <Badge> {product.badge}</Badge> */}
               </CardContent>
               <CardFooter>
                 {/* <Button className="w-full">Order</Button> */}

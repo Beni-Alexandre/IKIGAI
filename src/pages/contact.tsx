@@ -47,9 +47,11 @@ function Contact() {
   return (
     <div>
       <Header />
-      <main className="container mx-auto px-4 py-12 min-h-screen lg:min-h-screen overflow-y-auto">
-        <h1 className="mb-8 text-4xl font-bold text-center">Contactez-nous</h1>
-        <div className="grid gap-8 md:grid-cols-2">
+      <main className="container mx-auto px-4 py-12 min-h-screen lg:min-h-screen overflow-y-auto ">
+        <h1 className="mb-8 text-4xl font-bold text-center animate-fade-in">
+          Contactez-nous
+        </h1>
+        <div className="grid gap-8 md:grid-cols-2 animate-fade-in-delay-1">
           <Card>
             <CardHeader>
               <CardTitle>Envoyez-nous un message</CardTitle>

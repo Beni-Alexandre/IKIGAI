@@ -118,45 +118,26 @@ section {
   display: none;
 }
 
-
-/* 
-@media (max-width: 768px) {
-
-  .menu :not(:last-child) {
-    margin-right: 50px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
-@media (max-width: 600px) {
-  .menu-icon {
-    display: block;
-    cursor: pointer;
-  }
-
-  
-  .menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 0;
-    background-color: #fff;
-    z-index: 1000;
-    height: calc(100vh - 60px);
-    transition: all 0.7s ease-in;
-    overflow: hidden;
-  }
-
-  .menu.active {
-    width: 270px;
-  }
-
-  .menu ul {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menu ul li {
-    margin-right: unset;
-    margin-top: 22px;
-  }
-} */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+.animate-fade-in-delay-1 {
+  animation: fadeIn 0.5s ease-out 0.4s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.animate-fade-in-delay-2 {
+  animation: fadeIn 1.5s ease-out 0.4s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}

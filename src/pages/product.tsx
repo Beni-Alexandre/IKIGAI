@@ -144,14 +144,7 @@ function Products() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("name");
-  //   const [newProduct, setNewProduct] = useState({
-  //     name: "",
-  //     price: "",
-  //     category: "",
-  //     badge: "",
-  //     image: "",
-  //   });
-  //   const fileInputRef = useRef<HTMLInputElement>(null);
+
   const filteredProducts = products
     .filter(
       (product) =>
@@ -165,32 +158,14 @@ function Products() {
       return 0;
     });
 
-  // const handleAddProduct = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   const productToAdd = {
-  //     ...newProduct,
-  //     id: products.length + 1,
-  //     price: parseFloat(newProduct.price),
-  //   };
-  //   setProducts([...products, productToAdd]);
-  //   setNewProduct({ name: "", price: "", category: "", badge: "", image: "" });
-  // };
-  // const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   const file = e.target.files?.[0];
-  //   if (file) {
-  //     const reader = new FileReader();
-  //     reader.onloadend = () => {
-  //       setNewProduct({ ...newProduct, image: reader.result as string });
-  //     };
-  //     reader.readAsDataURL(file);
-  //   }
-  // };
   return (
     <div>
       <Header />
       <main className="container mx-auto px-4 py-12">
-        <h1 className="mb-8 text-4xl font-bold text-center">Nos Produits</h1>
-        <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+        <h1 className="mb-8 text-4xl font-bold text-center animate-fade-in">
+          Nos Produits
+        </h1>
+        <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between animate-fade-in-delay-1">
           <div className="w-full md:w-1/3 relative">
             <Input
               type="text"
@@ -232,7 +207,7 @@ function Products() {
             </Select>
           </div>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-fade-in-delay-2">
           {filteredProducts.map((product) => (
             <Card key={product.id} className="flex flex-col">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-lg">

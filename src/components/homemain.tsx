@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 function Homemain() {
   return (
-    <div>
+    <div className="animate-fade-in-delay-1">
       <section className="bg-blue-600 text-white">
         <div className="container mx-auto px-4 py-20 text-center"></div>
 
@@ -27,7 +27,11 @@ function Homemain() {
         </p>
         <Link to="/product">
           {" "}
-          <Button className="explore_button" size="lg" variant="secondary">
+          <Button
+            className="explore_button animate-pulse "
+            size="lg"
+            variant="secondary"
+          >
             Explorez notre collection
           </Button>
         </Link>
@@ -41,7 +45,7 @@ function Homemain() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <Card>
             <CardHeader>
-              <TrendingUp className="h-10 w-10 text-blue-500" />
+              <TrendingUp className="h-10 w-10 text-blue-500 animate-bounce" />
               <CardTitle>Adapté aux tendances</CardTitle>
             </CardHeader>
             <CardContent>
@@ -53,7 +57,7 @@ function Homemain() {
           </Card>
           <Card>
             <CardHeader>
-              <ShoppingBag className="h-10 w-10 text-green-500" />
+              <ShoppingBag className="h-10 w-10 text-green-500 animate-bounce " />
               <CardTitle>Sélection minutieuse</CardTitle>
             </CardHeader>
             <CardContent>
@@ -65,7 +69,7 @@ function Homemain() {
           </Card>
           <Card>
             <CardHeader>
-              <Gift className="h-10 w-10 text-red-500" />
+              <Gift className="h-10 w-10 text-red-500 animate-bounce" />
               <CardTitle>Offres saisonnières</CardTitle>
             </CardHeader>
             <CardContent>
@@ -77,7 +81,7 @@ function Homemain() {
           </Card>
           <Card>
             <CardHeader>
-              <Sun className="h-10 w-10 text-yellow-500" />
+              <Sun className="h-10 w-10 text-yellow-500 animate-bounce" />
               <CardTitle>Toujours Pertinent</CardTitle>
             </CardHeader>
             <CardContent>

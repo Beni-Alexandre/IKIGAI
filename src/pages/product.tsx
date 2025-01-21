@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Header from "components/header";
 import {
   Card,
@@ -38,7 +38,7 @@ const initialProducts = [
     name: "Huile de Palme",
     price: 1000,
     category: "Aliment",
-    badge: "Hot",
+    badge: "Chaud",
     image: "/images/palm oil 01.jpg",
   },
   {
@@ -46,7 +46,7 @@ const initialProducts = [
     name: "Cannelle",
     price: 10000,
     category: "Épicerie",
-    badge: "Best Seller",
+    badge: "Plus vendu",
     image: "/images/cannelle01.jpg",
   },
   {
@@ -54,7 +54,7 @@ const initialProducts = [
     name: "Curcuma",
     price: 8000,
     category: "Épicerie",
-    badge: "New",
+    badge: "Nouveau",
     image: "/images/curcuma01.jpg",
   },
   {
@@ -62,7 +62,7 @@ const initialProducts = [
     name: "Ail",
     price: 13000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/garlic01.jpg",
   },
   {
@@ -70,7 +70,7 @@ const initialProducts = [
     name: "Gingembre",
     price: 7000,
     category: "Épicerie",
-    badge: "Trending",
+    badge: "Nouveau",
     image: "/images/gingembre01.jpg",
   },
   {
@@ -78,7 +78,7 @@ const initialProducts = [
     name: "Clou de girofle",
     price: 15000,
     category: "Épicerie",
-    badge: "Eco-friendly",
+    badge: "Nouveau",
     image: "/images/clou de girofle01.jpg",
   },
   {
@@ -86,7 +86,7 @@ const initialProducts = [
     name: "Badiane",
     price: 8000,
     category: "Épicerie",
-    badge: "Hot",
+    badge: "Nouveau",
     image: "/images/badiane01.jpg",
   },
   {
@@ -94,7 +94,7 @@ const initialProducts = [
     name: "Thym",
     price: 5000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/thym01.jpg",
   },
   {
@@ -102,7 +102,7 @@ const initialProducts = [
     name: "Romarin",
     price: 9000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/romarin01.jpg",
   },
   {
@@ -110,7 +110,7 @@ const initialProducts = [
     name: "Poivre noir ",
     price: 10000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/poivrenoir01.jpg",
   },
   {
@@ -118,7 +118,7 @@ const initialProducts = [
     name: "Poivre long",
     price: 6000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meileur",
     image: "/images/poivrelong01.jpg",
   },
   {
@@ -126,7 +126,7 @@ const initialProducts = [
     name: "Piment rouge",
     price: 3500,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/pimmentrouge01.jpg",
   },
   {
@@ -134,7 +134,7 @@ const initialProducts = [
     name: "Laurier",
     price: 5000,
     category: "Épicerie",
-    badge: "Top Rated",
+    badge: "Meilleur",
     image: "/images/laurier01.jpg",
   },
 ];
@@ -256,58 +256,8 @@ function Products() {
               </CardHeader>
               <CardContent>
                 <p>Catégorie: {product.category}</p>
-                {/* <Badge> {product.badge}</Badge> */}
               </CardContent>
-              <CardFooter>
-                {/* <Button className="w-full">Order</Button> */}
-                {/* <Dialog>
-                  <DialogTrigger asChild>
-                    <Button className="w-full">Commander</Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[425px]">
-                    <DialogHeader>
-                      <DialogTitle>Order this product</DialogTitle>
-                      <DialogDescription>
-                        Choose the quantity and order.
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="grid gap-4 py-4">
-                      <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="quantity" className="text-right">
-                          Quantity
-                        </Label>
-                        <Input
-                          type="number"
-                          id="name"
-                          min={1}
-                          className="col-span-3"
-                        />
-                      </div>
-                      <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="username" className="text-right">
-                          Username
-                        </Label>
-                        <Input
-                          id="username"
-                          value="@peduarte"
-                          className="col-span-3"
-                        />
-                        <Label htmlFor="username" className="text-right">
-                          Username
-                        </Label>
-                        <Input
-                          id="username"
-                          value="@peduarte"
-                          className="col-span-3"
-                        />
-                      </div>
-                    </div>
-                    <DialogFooter>
-                      <Button type="submit">Send the order</Button>
-                    </DialogFooter>
-                  </DialogContent>
-                </Dialog> */}
-              </CardFooter>
+              <CardFooter></CardFooter>
             </Card>
           ))}
         </div>
@@ -316,121 +266,6 @@ function Products() {
             Aucun produit trouvé.
           </p>
         )}
-        {/* <div className="mt-12">
-          <h2 className="text-2xl font-bold mb-4">Add New Product</h2>
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button>
-                <Upload className="mr-2 h-4 w-4" /> Add Product
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Add New Product</DialogTitle>
-                <DialogDescription>
-                  Enter the details of the new product here. Click save when
-                  you're done.
-                </DialogDescription>
-              </DialogHeader>
-              <form onSubmit={handleAddProduct}>
-                <div className="grid gap-4 py-4">
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="name" className="text-right">
-                      Name
-                    </Label>
-                    <Input
-                      id="name"
-                      value={newProduct.name}
-                      onChange={(e) =>
-                        setNewProduct({ ...newProduct, name: e.target.value })
-                      }
-                      className="col-span-3"
-                    />
-                  </div>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="price" className="text-right">
-                      Price
-                    </Label>
-                    <Input
-                      id="price"
-                      type="number"
-                      value={newProduct.price}
-                      onChange={(e) =>
-                        setNewProduct({ ...newProduct, price: e.target.value })
-                      }
-                      className="col-span-3"
-                    />
-                  </div>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="category" className="text-right">
-                      Category
-                    </Label>
-                    <Select
-                      value={newProduct.category}
-                      onValueChange={(value) =>
-                        setNewProduct({ ...newProduct, category: value })
-                      }
-                    >
-                      <SelectTrigger className="col-span-3">
-                        <SelectValue placeholder="Select a category" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="All">All Categories</SelectItem>
-                        <SelectItem value="Épicerie">Épicerie</SelectItem>
-                        <SelectItem value="Aliment">Aliment</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="badge" className="text-right">
-                      Badge
-                    </Label>
-                    <Input
-                      id="badge"
-                      value={newProduct.badge}
-                      onChange={(e) =>
-                        setNewProduct({ ...newProduct, badge: e.target.value })
-                      }
-                      className="col-span-3"
-                    />
-                  </div>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <label htmlFor="image" className="text-right">
-                      UploadImage
-                    </label>
-                    <div className="col-span-3">
-                      <input
-                        type="file"
-                        id="image"
-                        accept="image/"
-                        onChange={handleImageUpload}
-                        className="hidden"
-                        ref={fileInputRef}
-                      />
-                      <Button
-                        type="button"
-                        variant="outline"
-                        onClick={() => fileInputRef.current?.click()}
-                        className="w-full"
-                      >
-                        <ImageIcon className="mr-2 h-4 w-4" />
-                        {
-                          newProduct.image !==
-                            "/placeholder.svg?height=400&width=600"
-                          //   ? t.imageUploaded
-                          //   : t.selectImage
-                        }
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-                <DialogFooter>
-                  <Button type="submit">Save Product</Button>
-                </DialogFooter>
-              </form>
-            </DialogContent>
-          </Dialog>
-        </div> */}
       </main>
       <Footer />
     </div>

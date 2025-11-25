@@ -137,6 +137,14 @@ const initialProducts = [
     badge: "Meilleur",
     image: "/images/laurier01.jpg",
   },
+  {
+    id: 14,
+    name: "Smart juice",
+    price: 600,
+    category: "Épicerie",
+    badge: "Meilleur",
+    image: "/images/Smart-juice.jpg",
+  },
 ];
 function Products() {
   const [products, setProducts] = useState(initialProducts);

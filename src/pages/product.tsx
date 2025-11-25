@@ -141,7 +141,7 @@ const initialProducts = [
     id: 14,
     name: "Smart juice",
     price: 600,
-    category: "Épicerie",
+    category: "-",
     badge: "Meilleur",
     image: "/images/Smart-juice.jpg",
   },
